@@ -7,14 +7,40 @@
         3.2 Other
     4. Areas
         4.1 Header
+            4.1.a Navigation
         4.2 Introduction
         etc.
     5. Media Queries
 ////////////////////////*/
 
+/*/////
+Kleurenpalet
+Paars #5722CD
+Blauw #4845E4
+Roze #ED4385
+Zwart #0C0C0C (voor standaard tekst)
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst)
+/////*/
+
 /* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -25,6 +51,21 @@
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+
+
+/* --------------- 4.1.a Navigation ------------------------- */
+.navbar {
+    width: 100%;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    gap: 50px;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
