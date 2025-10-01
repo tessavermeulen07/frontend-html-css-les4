@@ -7,7 +7,6 @@
         3.2 Other
     4. Areas
         4.1 Header
-            4.1.a Navigation
         4.2 Introduction
         etc.
     5. Media Queries
@@ -36,26 +35,87 @@ Grijs #7A7A7A (voor de service-tegel tekst)
 /* ------------------------------- 2. Typography ----------------------------------- */
 body {
     font-family: "Roboto", sans-serif;
+    color: #0C0C0C;
+    font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Merriweather", serif;
 }
 
+a {
+    color: #4845E4;
+    text-decoration: none;
+}
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+.small-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    text-align: center;
+    /*padding: 150px 20px;*/
+    margin: 120px;
+    gap: 25px;
+
+    border: 2px dashed gold;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid red;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    border: 2px solid red;
+}
 
-/* --------------- 4.1.a Navigation ------------------------- */
+.header-text {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+header > nav > ul > li > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header > p {
+    color: #FFFFFF;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 40px;
+}
+
 .navbar {
     width: 100%;
+    padding: 20px;
+
+
+    border: 2px dashed yellow;
 }
 
 .navbar-list {
@@ -67,6 +127,35 @@ h1, h2, h3, h4, h5, h6 {
     gap: 50px;
 }
 
+button {
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background-color: #ED4385;
+    border: none;
+    width: 210px;
+    height: 60px;
+    border-radius: 60px;
+    box-shadow: 0px 5px 5px #3C178C;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
+h2 {
+    color: #4845E4;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.position {
+    padding-top: 85px;
+}
+
+/* --------------- 4.3 ?? ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

@@ -6,30 +6,37 @@
     <title>Title</title>
 </head>
 <body>
+<!--Header-->
 <header>
     <nav class="navbar">
-        <ul class="navbar-list"
-            <li><a href="/">Case Studies</a></li>
-            <li><a href="/">Services</a></li>
-            <li><a href="/">Contact Us</a></li>
+        <ul class="navbar-list">
+            <li><a href="#casestudies">Case Studies</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
-    <div>
+    <div class="small-inner-container header-text">
         <h1>Your website is an investment in the success of your business.</h1>
         <p>We are here to help you succeed.</p>
         <button type="submit">Let's work together</button>
     </div>
+    <img src="assets/squiggle_line_stripe.svg" alt="squiggle-line-stripe"/>
 </header>
+<!--Main-->
 <main>
     <section>
-        <div>
-            <h2>Rekupe is a digital agency in Los Angeles. We use strategic UX, SEO optimization and beautiful visual
-                designs to help your business grow. We see every project as a fresh opportunity, pushing ourselves to
-                create new digital experiences.</h2>
-            <p>Have a question? Click here to contact us!</p>
+        <div class="small-inner-container">
+            <div class="introduction">
+                <h2>Rekupe is a digital agency in Los Angeles.</h2>
+                <h2>We use strategic UX, SEO optimization and beautiful visual
+                    designs to help your business grow.</h2>
+                <h2>We see every project as a fresh opportunity, pushing ourselves to
+                    create new digital experiences.</h2>
+                <p class="position">Have a question? <a href="#contact">Click here</a> to contact us!</p>
+            </div>
         </div>
     </section>
-    <section>
+    <section id="casestudies">
         <div>
             <article>
                 <div>
@@ -59,7 +66,7 @@
             </article>
         </div>
     </section>
-    <section>
+    <section id="services">
         <div>
             <article>
                 <h4>Web Design</h4>
@@ -100,7 +107,7 @@
             </article>
         </div>
     </section>
-    <section>
+    <section id="contact">
         <div>
             <h2>Let's work together</h2>
             <p>Have a question? Need a quote? Let us know!</p>
