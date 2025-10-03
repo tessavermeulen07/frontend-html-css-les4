@@ -10,6 +10,7 @@
         4.2 Introduction
         4.3 Case Studies
         4.4 Services
+        4.5 Contact
     5. Media Queries
 ////////////////////////*/
 
@@ -49,6 +50,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 16px;
+}
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
@@ -59,11 +64,10 @@ a {
     align-items: center;
     max-width: 800px;
     text-align: center;
-    /*padding: 150px 20px;*/
-    margin: 120px;
+    margin: 100px;
     gap: 25px;
 
-    border: 2px dashed gold;
+    /*border: 2px dashed gold;*/
 }
 
 section {
@@ -72,7 +76,7 @@ section {
     justify-content: center;
     align-items: center;
 
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -89,7 +93,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 .header-text {
@@ -116,7 +120,7 @@ h1 {
     padding: 20px;
 
 
-    border: 2px dashed yellow;
+    /*border: 2px dashed yellow;*/
 }
 
 .navbar-list {
@@ -137,7 +141,7 @@ button {
     width: 210px;
     height: 60px;
     border-radius: 60px;
-    box-shadow: 0px 5px 5px #3C178C;
+    box-shadow: 0 5px 5px #3C178C;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
@@ -181,7 +185,7 @@ h3 {
     gap: 100px;
     padding: 100px 0;
 
-    border: 2px dashed darkolivegreen;
+    /*border: 2px dashed darkolivegreen;*/
 }
 
 .article-casestudies {
@@ -190,8 +194,9 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    padding: 20px;
 
-    border: 2px solid orangered;
+    /*border: 2px solid orangered;*/
 }
 
 .article-casestudies:nth-child(even) {
@@ -206,12 +211,13 @@ h3 {
     gap: 40px;
     flex-basis: 350px;
 
-    border: 2px solid darkcyan;
+    /*border: 2px solid darkcyan;*/
 }
 
 .casestudies-text a {
     text-transform: uppercase;
     font-weight: 500;
+    color: #5722CD;
 }
 
 .image-wrapper {
@@ -222,7 +228,7 @@ h3 {
     flex-basis: 800px;
     flex-grow: 0;
     flex-shrink: 1;
-    box-shadow: 0px 10px 20px #7A7A7A;
+    box-shadow: 0 10px 20px #7A7A7A;
 }
 
 .image-wrapper img {
@@ -235,33 +241,135 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /*flex-basis: 500px;*/
     flex-wrap: wrap;
     gap: 50px;
     padding: 100px;
 
-    border: 5px solid #4845E4;
+    /*border: 5px solid #4845E4;*/
 }
 
 .services-article-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 50px 20px;
-    width: 380px;
-    flex-wrap: wrap;
-    gap: 20px;
-    box-shadow: 0px 10px 20px lightgray; ;
+    /*align-items: stretch;*/
+    padding: 50px;
+    flex-basis: 390px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    /*flex-wrap: wrap;*/
+    /*gap: 20px;*/
+    box-shadow: 0 10px 20px lightgray; ;
     border: 1px solid #3C178C;
     color: #7A7A7A;
 }
 
 .services-article-container h4 {
-    color: #3C178C;
+    color: #5722CD;
+    font-size: 24px;
+    padding: 20px 0;
 }
 
+.services-article-container img {
+    width: 80px;
+    /*height: 80px;*/
+}
 
+/* --------------- 4.5 Contact ------------------- */
+.contact {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-/* --------------- 4.5 ??? ------------------- */
+    /*border: 2px solid red;*/
+}
+
+section > div > h2 {
+    font-size: 50px;
+    color: #FFFFFF;
+}
+
+.form-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 800px;
+}
+
+.form-style input {
+    margin-bottom: 30px;
+    height: 50px;
+    width: 100%;
+}
+
+.form-style label {
+    font-weight: 700;
+}
+
+.form-style input::placeholder {
+    padding-left: 10px;
+}
+
+.form-style textarea {
+    margin-bottom: 30px;
+    height: 200px;
+    width: 100%;
+}
+
+.form-style textarea::placeholder {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.form-style button {
+    align-self: center;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+footer {
+    background-color: #0C0C0C;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (max-width: 576px)  {
+    /* ------------------------------- 3. Layout --------------------------------------- */
+
+    /* --------------- 3.1 Reusables ----------------------- */
+    .small-inner-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 800px;
+        text-align: center;
+        margin: 50px 5px;
+        gap: 25px;
+    }
+
+    h1 {
+        font-weight: 800;
+        font-size: 25px;
+    }
+
+    .header-text {
+        font-size: 22px;
+        font-weight: 200;
+    }
+
+    header > nav > ul > li > a {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .navbar-list {
+        justify-content: center;
+      }
+}
