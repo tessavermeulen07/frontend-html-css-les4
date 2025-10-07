@@ -92,6 +92,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     /*border: 2px solid red;*/
 }
@@ -142,6 +143,16 @@ button {
     height: 60px;
     border-radius: 60px;
     box-shadow: 0 5px 5px #3C178C;
+    margin: 0 0 150px 0;
+}
+
+.header-squiggle {
+    display: block;
+    width: 78px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background-image: url("../assets/squiggle_line_stripe.svg");
 }
 
 /* --------------- 4.2 Introduction ------------------- */
@@ -240,7 +251,7 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 50px;
     padding: 100px;
@@ -252,14 +263,11 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /*align-items: stretch;*/
     padding: 50px;
     flex-basis: 390px;
     flex-grow: 0;
     flex-shrink: 1;
-    /*flex-wrap: wrap;*/
-    /*gap: 20px;*/
-    box-shadow: 0 10px 20px lightgray; ;
+    box-shadow: 0 10px 20px lightgray;;
     border: 1px solid #3C178C;
     color: #7A7A7A;
 }
@@ -272,7 +280,6 @@ h3 {
 
 .services-article-container img {
     width: 80px;
-    /*height: 80px;*/
 }
 
 /* --------------- 4.5 Contact ------------------- */
@@ -339,19 +346,36 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
-@media screen and (max-width: 576px)  {
-    /* ------------------------------- 3. Layout --------------------------------------- */
+@media screen and (max-width: 576px) {
 
+    /* ------------------------------- 2. Typography ----------------------------------- */
+    body, p {
+        font-size: 14px;
+    }
+    body {
+        font-family: "Roboto", sans-serif;
+        color: #0C0C0C;
+        font-size: 18px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Merriweather", serif;
+    }
+
+    /* ------------------------------- 3. Layout --------------------------------------- */
     /* --------------- 3.1 Reusables ----------------------- */
     .small-inner-container {
-        display: flex;
-        flex-direction: column;
+        margin: 50px 10px;
+    }
+
+    /* ------------------------------- 4. Areas ---------------------------------------- */
+    /* --------------- 4.1 Header ------------------------- */
+    .navbar-list {
         justify-content: center;
-        align-items: center;
-        max-width: 800px;
-        text-align: center;
-        margin: 50px 5px;
-        gap: 25px;
+    }
+
+    header > nav > ul > li > a {
+        font-weight: 700;
     }
 
     h1 {
@@ -359,17 +383,99 @@ footer {
         font-size: 25px;
     }
 
-    .header-text {
+    header > div > p {
         font-size: 22px;
-        font-weight: 200;
+    }
+    /* --------------- 4.2 Introduction ------------------- */
+    h2 {
+        font-size: 17px;
+    }
+    .position {
+        padding: 25px 0;
     }
 
-    header > nav > ul > li > a {
-        font-size: 12px;
+    /* --------------- 4.3 Case Studies ------------------- */
+    h3 {
+        font-size: 28px;
+    }
+
+    .casestudies-section {
+        background-color: #F3F6F9;
+    }
+
+    .casestudies {
+        gap: 10px;
+        padding: 50px 0;
+
+    /*    !*border: 2px dashed darkolivegreen;*!*/
+    }
+
+    .article-casestudies {
+        flex-direction: column-reverse;
+
+        /*border: 2px solid orangered;*/
+    }
+
+    .article-casestudies:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .casestudies-text {
+        justify-content: flex-start;
+        gap: 35px;
+        flex-basis: 100px;
+
+        /*border: 2px solid darkcyan;*/
+    }
+
+    .casestudies-text a {
+        text-transform: uppercase;
         font-weight: 700;
+        color: #5722CD;
+        letter-spacing: 0.1em;
     }
 
-    .navbar-list {
-        justify-content: center;
-      }
+    .image-wrapper {
+        justify-content: flex-start;
+        flex-basis: 25%;
+    }
+
+    /* --------------- 4.4 Serivces ------------------- */
+    .services {
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        /*justify-content: center;*/
+        /*align-items: stretch;*/
+        /*flex-wrap: wrap;*/
+        gap: 30px;
+        padding: 70px 50px;
+
+        /*border: 5px solid #4845E4;*/
+    }
+
+    .services-article-container {
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: flex-start;*/
+        align-items: flex-start;
+        padding: 25px;
+        /*flex-basis: 350px;*/
+        width: 100%;
+        /*flex-grow: 0;*/
+        /*flex-shrink: 1;*/
+        /*box-shadow: 0 10px 20px lightgray;;*/
+        /*border: 1px solid #3C178C;*/
+        /*color: #7A7A7A;*/
+    }
+
+    .services-article-container h4 {
+        /*color: #5722CD;*/
+        font-size: 20px;
+        /*padding: 20px 0;*/
+    }
+
+    .services-article-container img {
+        width: 60px;
+    }
+
 }
