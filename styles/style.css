@@ -63,8 +63,10 @@ p {
     justify-content: center;
     align-items: center;
     max-width: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
     text-align: center;
-    margin: 100px;
+    margin: 100px 0;
     gap: 25px;
 
     /*border: 2px dashed gold;*/
@@ -118,7 +120,7 @@ h1 {
 
 .navbar {
     width: 100%;
-    padding: 20px;
+    padding: 30px;
 
 
     /*border: 2px dashed yellow;*/
@@ -204,8 +206,10 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 150px;
     padding: 20px;
+    flex-grow: 0;
+    flex-shrink: 1;
 
     /*border: 2px solid orangered;*/
 }
@@ -220,7 +224,7 @@ h3 {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 40px;
-    flex-basis: 350px;
+    flex-basis: 300px;
 
     /*border: 2px solid darkcyan;*/
 }
@@ -229,6 +233,7 @@ h3 {
     text-transform: uppercase;
     font-weight: 500;
     color: #5722CD;
+    letter-spacing: 0.1em;
 }
 
 .image-wrapper {
@@ -287,11 +292,7 @@ h3 {
     background: #4845E4;
     background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    position: relative;
     /*border: 2px solid red;*/
 }
 
@@ -303,15 +304,20 @@ section > div > h2 {
 .form-style {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 800px;
-}
+    width: 100%;
+    text-align: left;
+    }
 
 .form-style input {
-    margin-bottom: 30px;
-    height: 50px;
+    padding: 20px;
     width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #7A7A7A;
+    font-family: "Roboto", sans-serif;
+    display: block;
+    font-size: 16px;
+    color: #7A7A7A;
+    margin-bottom: 30px;
 }
 
 .form-style label {
@@ -326,6 +332,12 @@ section > div > h2 {
     margin-bottom: 30px;
     height: 200px;
     width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #7A7A7A;
+    font-family: "Roboto", sans-serif;
+    display: block;
+    font-size: 16px;
+    color: #7A7A7A;
 }
 
 .form-style textarea::placeholder {
@@ -335,6 +347,7 @@ section > div > h2 {
 
 .form-style button {
     align-self: center;
+    margin-bottom: 20px;
 }
 
 /* --------------- 4.6 Footer ------------------- */
@@ -347,29 +360,29 @@ footer {
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
 @media screen and (max-width: 576px) {
+    /* ------------------------------- 5.1 Global ----------------------------------- */
 
-    /* ------------------------------- 2. Typography ----------------------------------- */
-    body, p {
-        font-size: 14px;
-    }
+
+    /* ------------------------------- 5.2 Typography ----------------------------------- */
     body {
         font-family: "Roboto", sans-serif;
         color: #0C0C0C;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     h1, h2, h3, h4, h5, h6 {
         font-family: "Merriweather", serif;
     }
 
-    /* ------------------------------- 3. Layout --------------------------------------- */
+
+    /* ------------------------------- 5.3 Layout --------------------------------------- */
     /* --------------- 3.1 Reusables ----------------------- */
     .small-inner-container {
         margin: 50px 10px;
     }
 
-    /* ------------------------------- 4. Areas ---------------------------------------- */
-    /* --------------- 4.1 Header ------------------------- */
+    /* ------------------------------- 5.4 Areas ---------------------------------------- */
+    /* --------------- 5.4.1 Header ------------------------- */
     .navbar-list {
         justify-content: center;
     }
@@ -380,21 +393,23 @@ footer {
 
     h1 {
         font-weight: 800;
-        font-size: 25px;
+        font-size: 36px;
     }
 
     header > div > p {
         font-size: 22px;
     }
-    /* --------------- 4.2 Introduction ------------------- */
-    h2 {
-        font-size: 17px;
-    }
+
+    /* --------------- 5.4.2 Introduction ------------------- */
+h2 {
+    font-size: 1em;
+}
+
     .position {
         padding: 25px 0;
     }
 
-    /* --------------- 4.3 Case Studies ------------------- */
+    /* --------------- 5.4.3 Case Studies ------------------- */
     h3 {
         font-size: 28px;
     }
@@ -407,11 +422,12 @@ footer {
         gap: 10px;
         padding: 50px 0;
 
-    /*    !*border: 2px dashed darkolivegreen;*!*/
+        /*    !*border: 2px dashed darkolivegreen;*!*/
     }
 
     .article-casestudies {
         flex-direction: column-reverse;
+        gap: 50px;
 
         /*border: 2px solid orangered;*/
     }
@@ -440,7 +456,7 @@ footer {
         flex-basis: 25%;
     }
 
-    /* --------------- 4.4 Serivces ------------------- */
+    /* --------------- 5.4.4 Serivces ------------------- */
     .services {
         /*display: flex;*/
         /*flex-direction: row;*/
@@ -448,7 +464,7 @@ footer {
         /*align-items: stretch;*/
         /*flex-wrap: wrap;*/
         gap: 30px;
-        padding: 70px 50px;
+        padding: 50px;
 
         /*border: 5px solid #4845E4;*/
     }
@@ -458,7 +474,7 @@ footer {
         /*flex-direction: column;*/
         /*justify-content: flex-start;*/
         align-items: flex-start;
-        padding: 25px;
+        padding: 50px 30px;
         /*flex-basis: 350px;*/
         width: 100%;
         /*flex-grow: 0;*/
@@ -478,4 +494,15 @@ footer {
         width: 60px;
     }
 
+    /* --------------- 5,4.5 Contact ------------------- */
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    /* --------------- 5.4.6 Footer ------------------- */
+footer p {
+    font-size: 12px;
 }
+
+}
+
