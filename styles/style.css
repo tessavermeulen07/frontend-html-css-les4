@@ -35,10 +35,10 @@ Grijs #7A7A7A (voor de service-tegel tekst)
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
-body {
+body, p {
     font-family: "Roboto", sans-serif;
     color: #0C0C0C;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,9 +50,6 @@ a {
     text-decoration: none;
 }
 
-p {
-    font-size: 16px;
-}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -63,11 +60,12 @@ p {
     justify-content: center;
     align-items: center;
     max-width: 800px;
-    flex-grow: 0;
+    flex-grow: 2;
     flex-shrink: 1;
     text-align: center;
     margin: 100px 0;
     gap: 25px;
+    padding: 0 50px;
 
     /*border: 2px dashed gold;*/
 }
@@ -293,6 +291,9 @@ h3 {
     background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
     color: #FFFFFF;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    /*flex-basis: 800px;*/
     /*border: 2px solid red;*/
 }
 
@@ -353,9 +354,12 @@ section > div > h2 {
 /* --------------- 4.6 Footer ------------------- */
 footer {
     background-color: #0C0C0C;
-    color: #FFFFFF;
     padding: 20px;
     text-align: center;
+}
+
+footer > p {
+    color: #FFFFFF;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
@@ -364,10 +368,10 @@ footer {
 
 
     /* ------------------------------- 5.2 Typography ----------------------------------- */
-    body {
+    body, p {
         font-family: "Roboto", sans-serif;
         color: #0C0C0C;
-        font-size: 20px;
+        font-size: 12px;
     }
 
     h1, h2, h3, h4, h5, h6 {
