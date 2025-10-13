@@ -38,7 +38,7 @@ Grijs #7A7A7A (voor de service-tegel tekst)
 body, p {
     font-family: "Roboto", sans-serif;
     color: #0C0C0C;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,8 +66,6 @@ a {
     margin: 100px 0;
     gap: 25px;
     padding: 0 50px;
-
-    /*border: 2px dashed gold;*/
 }
 
 section {
@@ -75,8 +73,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /*border: 2px solid red;*/
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -93,8 +89,10 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
+}
 
-    /*border: 2px solid red;*/
+header > div > p {
+    color: #FFFFFF;
 }
 
 .header-text {
@@ -107,21 +105,16 @@ header > nav > ul > li > a {
     text-decoration: none;
 }
 
-header > p {
-    color: #FFFFFF;
-}
+
 
 h1 {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 1.5em;
 }
 
 .navbar {
     width: 100%;
     padding: 30px;
-
-
-    /*border: 2px dashed yellow;*/
 }
 
 .navbar-list {
@@ -195,8 +188,6 @@ h3 {
     flex-basis: 500px;
     gap: 100px;
     padding: 100px 0;
-
-    /*border: 2px dashed darkolivegreen;*/
 }
 
 .article-casestudies {
@@ -208,8 +199,6 @@ h3 {
     padding: 20px;
     flex-grow: 0;
     flex-shrink: 1;
-
-    /*border: 2px solid orangered;*/
 }
 
 .article-casestudies:nth-child(even) {
@@ -223,8 +212,6 @@ h3 {
     align-items: flex-start;
     gap: 40px;
     flex-basis: 300px;
-
-    /*border: 2px solid darkcyan;*/
 }
 
 .casestudies-text a {
@@ -258,8 +245,6 @@ h3 {
     flex-wrap: wrap;
     gap: 50px;
     padding: 100px;
-
-    /*border: 5px solid #4845E4;*/
 }
 
 .services-article-container {
@@ -272,7 +257,11 @@ h3 {
     flex-shrink: 1;
     box-shadow: 0 10px 20px lightgray;;
     border: 1px solid #3C178C;
+}
+
+.services-article-container p {
     color: #7A7A7A;
+    font-size: 16px;
 }
 
 .services-article-container h4 {
@@ -293,12 +282,14 @@ h3 {
     position: relative;
     display: flex;
     flex-direction: row;
-    /*flex-basis: 800px;*/
-    /*border: 2px solid red;*/
 }
 
 section > div > h2 {
     font-size: 50px;
+    color: #FFFFFF;
+}
+
+section > div > p {
     color: #FFFFFF;
 }
 
@@ -307,7 +298,7 @@ section > div > h2 {
     flex-direction: column;
     width: 100%;
     text-align: left;
-    }
+}
 
 .form-style input {
     padding: 20px;
@@ -365,19 +356,16 @@ footer > p {
 /* ------------------------------- 5. Media Queries -------------------------------- */
 @media screen and (max-width: 576px) {
     /* ------------------------------- 5.1 Global ----------------------------------- */
-
-
     /* ------------------------------- 5.2 Typography ----------------------------------- */
     body, p {
         font-family: "Roboto", sans-serif;
         color: #0C0C0C;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     h1, h2, h3, h4, h5, h6 {
         font-family: "Merriweather", serif;
     }
-
 
     /* ------------------------------- 5.3 Layout --------------------------------------- */
     /* --------------- 3.1 Reusables ----------------------- */
@@ -393,21 +381,17 @@ footer > p {
 
     header > nav > ul > li > a {
         font-weight: 700;
-    }
-
-    h1 {
-        font-weight: 800;
-        font-size: 36px;
+        font-size: 18px;
     }
 
     header > div > p {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     /* --------------- 5.4.2 Introduction ------------------- */
-h2 {
-    font-size: 1em;
-}
+    h2 {
+        font-size: 1em;
+    }
 
     .position {
         padding: 25px 0;
@@ -425,15 +409,11 @@ h2 {
     .casestudies {
         gap: 10px;
         padding: 50px 0;
-
-        /*    !*border: 2px dashed darkolivegreen;*!*/
     }
 
     .article-casestudies {
         flex-direction: column-reverse;
         gap: 50px;
-
-        /*border: 2px solid orangered;*/
     }
 
     .article-casestudies:nth-child(even) {
@@ -444,8 +424,6 @@ h2 {
         justify-content: flex-start;
         gap: 35px;
         flex-basis: 100px;
-
-        /*border: 2px solid darkcyan;*/
     }
 
     .casestudies-text a {
@@ -462,36 +440,18 @@ h2 {
 
     /* --------------- 5.4.4 Serivces ------------------- */
     .services {
-        /*display: flex;*/
-        /*flex-direction: row;*/
-        /*justify-content: center;*/
-        /*align-items: stretch;*/
-        /*flex-wrap: wrap;*/
         gap: 30px;
         padding: 50px;
-
-        /*border: 5px solid #4845E4;*/
     }
 
     .services-article-container {
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*justify-content: flex-start;*/
         align-items: flex-start;
         padding: 50px 30px;
-        /*flex-basis: 350px;*/
         width: 100%;
-        /*flex-grow: 0;*/
-        /*flex-shrink: 1;*/
-        /*box-shadow: 0 10px 20px lightgray;;*/
-        /*border: 1px solid #3C178C;*/
-        /*color: #7A7A7A;*/
     }
 
     .services-article-container h4 {
-        /*color: #5722CD;*/
         font-size: 20px;
-        /*padding: 20px 0;*/
     }
 
     .services-article-container img {
@@ -504,9 +464,9 @@ h2 {
     }
 
     /* --------------- 5.4.6 Footer ------------------- */
-footer p {
-    font-size: 12px;
-}
+    footer p {
+        font-size: 12px;
+    }
 
 }
 
