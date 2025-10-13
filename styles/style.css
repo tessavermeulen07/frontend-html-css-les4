@@ -8,24 +8,495 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Case Studies
+        4.4 Services
+        4.5 Contact
     5. Media Queries
 ////////////////////////*/
 
+/*/////
+Kleurenpalet
+Paars #5722CD
+Blauw #4845E4
+Roze #ED4385
+Zwart #0C0C0C (voor standaard tekst)
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst)
+/////*/
+
 /* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+body, p {
+    font-family: "Roboto", sans-serif;
+    color: #0C0C0C;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+}
+
+a {
+    color: #4845E4;
+    text-decoration: none;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+.small-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    flex-grow: 2;
+    flex-shrink: 1;
+    text-align: center;
+    margin: 100px 0;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header > div > p {
+    color: #FFFFFF;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+header > nav > ul > li > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+
+h1 {
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.navbar {
+    width: 100%;
+    padding: 30px;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    gap: 50px;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background-color: #ED4385;
+    border: none;
+    width: 210px;
+    height: 60px;
+    border-radius: 60px;
+    box-shadow: 0 5px 5px #3C178C;
+    margin: 0 0 150px 0;
+}
+
+.header-squiggle {
+    display: block;
+    width: 78px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    background-image: url("../assets/squiggle_line_stripe.svg");
+}
 
 /* --------------- 4.2 Introduction ------------------- */
+.triangle1 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid #FFFFFF;
+}
+
+h2 {
+    color: #5722CD;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.introduction a {
+    color: #5722CD;
+}
+
+.position {
+    padding-top: 85px;
+}
+
+/* --------------- 4.3 Case Studies ------------------- */
+.triangle2 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid #F3F6F9;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+.casestudies-section {
+    background-color: #F3F6F9;
+}
+
+.casestudies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 500px;
+    gap: 100px;
+    padding: 200px 0;
+}
+
+.article-casestudies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 20px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.article-casestudies:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.casestudies-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    flex-basis: 300px;
+}
+
+.casestudies-text a {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #5722CD;
+    letter-spacing: 0.1em;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    box-shadow: 0 10px 20px #7A7A7A;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+/* --------------- 4.4 Serivces ------------------- */
+.triangle3 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid #FFFFFF;
+}
+
+.triangle4 {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-top: 10vh solid #FFFFFF;
+    position: absolute;
+    top: 0;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 200px 0;
+}
+
+.services-article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px;
+    flex-basis: 390px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    box-shadow: 0 10px 20px lightgray;;
+    border: 1px solid #3C178C;
+}
+
+.services-article-container p {
+    color: #7A7A7A;
+    font-size: 16px;
+}
+
+.services-article-container h4 {
+    color: #5722CD;
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.services-article-container img {
+    width: 80px;
+}
+
+/* --------------- 4.5 Contact ------------------- */
+.contact {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    color: #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+section > div > h2 {
+    font-size: 50px;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+section > div > p {
+    color: #FFFFFF;
+}
+
+.form-style {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+}
+
+.form-style input {
+    padding: 20px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #7A7A7A;
+    font-family: "Roboto", sans-serif;
+    display: block;
+    font-size: 16px;
+    color: #7A7A7A;
+    margin-bottom: 30px;
+}
+
+.form-style label {
+    font-weight: 700;
+}
+
+.form-style input::placeholder {
+    padding-left: 10px;
+}
+
+.form-style textarea {
+    margin-bottom: 30px;
+    height: 200px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #7A7A7A;
+    font-family: "Roboto", sans-serif;
+    display: block;
+    font-size: 16px;
+    color: #7A7A7A;
+}
+
+.form-style textarea::placeholder {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.form-style button {
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+footer {
+    background-color: #0C0C0C;
+    padding: 20px;
+    text-align: center;
+}
+
+footer > p {
+    color: #FFFFFF;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (max-width: 576px) {
+    /* ------------------------------- 5.1 Global ----------------------------------- */
+    /* ------------------------------- 5.2 Typography ----------------------------------- */
+    body, p {
+        font-family: "Roboto", sans-serif;
+        color: #0C0C0C;
+        font-size: 14px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Merriweather", serif;
+    }
+
+    /* ------------------------------- 5.3 Layout --------------------------------------- */
+    /* --------------- 3.1 Reusables ----------------------- */
+    .small-inner-container {
+        margin: 50px 10px;
+    }
+
+    /* ------------------------------- 5.4 Areas ---------------------------------------- */
+    /* --------------- 5.4.1 Header ------------------------- */
+    .navbar-list {
+        justify-content: center;
+    }
+
+    header > nav > ul > li > a {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    header > div > p {
+        font-size: 16px;
+    }
+
+    /* --------------- 5.4.2 Introduction ------------------- */
+    h2 {
+        font-size: 1em;
+    }
+
+    .position {
+        padding: 25px 0;
+    }
+
+    /* --------------- 5.4.3 Case Studies ------------------- */
+    h3 {
+        font-size: 28px;
+    }
+
+    .casestudies-section {
+        background-color: #F3F6F9;
+    }
+
+    .casestudies {
+        gap: 10px;
+        padding: 50px 0;
+    }
+
+    .article-casestudies {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .article-casestudies:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .casestudies-text {
+        justify-content: flex-start;
+        gap: 35px;
+        flex-basis: 100px;
+    }
+
+    .casestudies-text a {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #5722CD;
+        letter-spacing: 0.1em;
+    }
+
+    .image-wrapper {
+        justify-content: flex-start;
+        flex-basis: 25%;
+    }
+
+    /* --------------- 5.4.4 Serivces ------------------- */
+    .services {
+        gap: 30px;
+        padding: 50px;
+    }
+
+    .services-article-container {
+        align-items: flex-start;
+        padding: 50px 30px;
+        width: 100%;
+    }
+
+    .services-article-container h4 {
+        font-size: 20px;
+    }
+
+    .services-article-container img {
+        width: 60px;
+    }
+
+    /* --------------- 5,4.5 Contact ------------------- */
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    /* --------------- 5.4.6 Footer ------------------- */
+    footer p {
+        font-size: 12px;
+    }
+
+}
