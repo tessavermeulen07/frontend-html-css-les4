@@ -38,7 +38,7 @@ Grijs #7A7A7A (voor de service-tegel tekst)
 body, p {
     font-family: "Roboto", sans-serif;
     color: #0C0C0C;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,7 +65,7 @@ a {
     text-align: center;
     margin: 100px 0;
     gap: 25px;
-    padding: 0 50px;
+    padding: 0 20px;
 }
 
 section {
@@ -144,15 +144,22 @@ button {
     width: 78px;
     height: 100px;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     background-image: url("../assets/squiggle_line_stripe.svg");
 }
 
 /* --------------- 4.2 Introduction ------------------- */
+.triangle1 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid #FFFFFF;
+}
+
 h2 {
     color: #5722CD;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .introduction {
@@ -172,6 +179,13 @@ h2 {
 }
 
 /* --------------- 4.3 Case Studies ------------------- */
+.triangle2 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid #F3F6F9;
+}
+
 h3 {
     font-size: 28px;
 }
@@ -187,7 +201,7 @@ h3 {
     align-items: center;
     flex-basis: 500px;
     gap: 100px;
-    padding: 100px 0;
+    padding: 200px 0;
 }
 
 .article-casestudies {
@@ -237,6 +251,22 @@ h3 {
 }
 
 /* --------------- 4.4 Serivces ------------------- */
+.triangle3 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid #FFFFFF;
+}
+
+.triangle4 {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-top: 10vh solid #FFFFFF;
+    position: absolute;
+    top: 0;
+}
+
 .services {
     display: flex;
     flex-direction: row;
@@ -244,7 +274,7 @@ h3 {
     align-items: stretch;
     flex-wrap: wrap;
     gap: 50px;
-    padding: 100px;
+    padding: 200px 0;
 }
 
 .services-article-container {
@@ -469,4 +499,3 @@ footer > p {
     }
 
 }
-
